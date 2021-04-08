@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 # react, react-dom
 # react MUI
 # react-hook-form
-# react-chartjs-2
+# recharts
 
 ## To Runs the app in the development mode.
 # clone the github repo
