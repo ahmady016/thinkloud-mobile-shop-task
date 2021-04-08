@@ -1,8 +1,31 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+
+import Typography from '@material-ui/core/Typography'
 import { DataGrid } from '@material-ui/data-grid'
 
 import { setSelectedMobile } from '../../_redux_store/mobiles'
+
+import styled from 'styled-components'
+const MobilesListContainer = styled.div`
+	width: 100%;
+	height: 62vh;
+	margin: 1rem 0;
+	& h5 {
+		margin-bottom: 0.5rem;
+	}
+	& div.MuiDataGrid-main div.MuiDataGrid-colCellWrapper {
+		background-color: #3f51b5 !important;
+		color: #fff !important;
+	}
+	& div.MuiDataGrid-row {
+		cursor: pointer;
+	}
+	& div.MuiDataGrid-row.Mui-selected,
+	& div.MuiDataGrid-row.Mui-selected:hover {
+		background-color: #d6dbf3;
+	}
+`
 
 const columns = [
 	{ field: 'brand', headerName: 'Brand', type: 'string', width: 300 },
@@ -19,7 +42,8 @@ function MobilesList() {
 	const mobiles = useSelector((state) => state.mobiles.filtered)
 	const dispatch = useDispatch()
 	return (
-		<div className="w-100 mt-1" style={{ height: 400 }}>
+		<MobilesListContainer>
+			<Typography variant="h5">Mobile List</Typography>
 			<DataGrid
 				columns={columns}
 				rows={mobiles}
@@ -31,7 +55,7 @@ function MobilesList() {
 						: dispatch(setSelectedMobile({ id: undefined }))
 				}}
 			/>
-		</div>
+		</MobilesListContainer>
 	)
 }
 
