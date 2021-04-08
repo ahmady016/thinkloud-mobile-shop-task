@@ -1,0 +1,122 @@
+[
+	{
+		"id": "047caf39-f678-4f73-a0dd-ad41d76d7249",
+		"model": "Sonoma",
+		"manufacture_year": 2004,
+		"brand": "Nokia",
+		"memory": "128GB",
+		"color": "gold",
+		"screen": 4,
+		"dual_sim": true,
+		"nfc": false,
+		"4g": false
+	},
+	{
+		"id": "9c84497e-9208-4593-8b06-8ddc6f841e29",
+		"model": "5 Series",
+		"manufacture_year": 1993,
+		"brand": "Sony",
+		"memory": "32GB",
+		"color": "gold",
+		"screen": 6,
+		"dual_sim": true,
+		"nfc": false,
+		"4g": true
+	},
+	{
+		"id": "f5269a83-441a-4585-8282-0d2273b1b685",
+		"model": "Silverado 1500",
+		"manufacture_year": 2005,
+		"brand": "LG",
+		"memory": "32GB",
+		"color": "white",
+		"screen": 6,
+		"dual_sim": false,
+		"nfc": false,
+		"4g": false
+	},
+	{
+		"id": "4888bd22-33b3-46c1-a1d6-d9ab38fbed91",
+		"model": "Ram",
+		"manufacture_year": 2008,
+		"brand": "Apple",
+		"memory": "128GB",
+		"color": "white",
+		"screen": 5,
+		"dual_sim": true,
+		"nfc": true,
+		"4g": true
+	},
+	{
+		"id": "1bef261e-d141-4bc6-aab3-9dde9b24d89a",
+		"model": "Grand Am",
+		"manufacture_year": 2003,
+		"brand": "Apple",
+		"memory": "64GB",
+		"color": "gold",
+		"screen": 6,
+		"dual_sim": true,
+		"nfc": true,
+		"4g": false
+	},
+	{
+		"id": "cbbcc1d6-3f09-4cd9-88c7-ca70dea09a35",
+		"model": "Corvette",
+		"manufacture_year": 1957,
+		"brand": "Nokia",
+		"memory": "32GB",
+		"color": "gold",
+		"screen": 6,
+		"dual_sim": false,
+		"nfc": true,
+		"4g": true
+	},
+	{
+		"id": "df9c78c5-3733-4b32-965e-1158f40ea635",
+		"model": "RDX",
+		"manufacture_year": 2011,
+		"brand": "Sony",
+		"memory": "128GB",
+		"color": "gold",
+		"screen": 4,
+		"dual_sim": true,
+		"nfc": false,
+		"4g": false
+	},
+	{
+		"id": "ee99db1a-3bb5-4409-93bd-dca3a050c978",
+		"model": "Sundance",
+		"manufacture_year": 1993,
+		"brand": "Sony",
+		"memory": "32GB",
+		"color": "gold",
+		"screen": 4,
+		"dual_sim": true,
+		"nfc": false,
+		"4g": true
+	},
+	{
+		"id": "ccc2de4a-6d30-4208-af05-6f2d2f3ce2f4",
+		"model": "Viper",
+		"manufacture_year": 2003,
+		"brand": "Nokia",
+		"memory": "32GB",
+		"color": "white",
+		"screen": 4,
+		"dual_sim": false,
+		"nfc": true,
+		"4g": true
+	},
+	{
+		"id": "b1b0675c-a919-4a70-870d-642965080e5c",
+		"model": "Grand Cherokee",
+		"manufacture_year": 1995,
+		"brand": "LG",
+		"memory": "128GB",
+		"color": "black",
+		"screen": 4,
+		"dual_sim": true,
+		"nfc": false,
+		"4g": true
+	}
+]
