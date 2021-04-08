@@ -5,6 +5,8 @@ import { useForm, Controller } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 
+import { store } from '../../_redux_store'
+import { searchMobiles } from '../../_redux_store/mobiles'
 import { BRANDS } from '../../_helpers/constants'
 
 import Grid from '@material-ui/core/Grid'
@@ -40,8 +42,9 @@ function SearchForm() {
 		},
 		resolver: yupResolver(schema),
 	})
-	const onSubmit = (data) => {
-		console.log(data)
+	const onSubmit = (values) => {
+		console.log('🚀: onSubmit => values', values)
+		store.dispatch(searchMobiles(values))
 	}
 
 	return (
@@ -81,27 +84,27 @@ function SearchForm() {
 					)}
 				</Grid>
 				<Grid item md={3} xs={12}>
-          <div className="w-100 h-100 mt-05 flex-column-around">
-            <Button
-              type="submit"
-              variant="outlined"
-              color="secondary"
-              fullWidth
-              startIcon={<AddIcon />}
-              onClick={goToAddMobile}
-            >
-              Add New Mobile
-            </Button>
-            <Button
-              type="submit"
-              variant="outlined"
-              color="primary"
-              fullWidth
-              startIcon={<SearchIcon />}
-            >
-              Search
-            </Button>
-          </div>
+					<div className="w-100 h-100 mt-05 flex-column-around">
+						<Button
+							type="submit"
+							variant="outlined"
+							color="secondary"
+							fullWidth
+							startIcon={<AddIcon />}
+							onClick={goToAddMobile}
+						>
+							Add New Mobile
+						</Button>
+						<Button
+							type="submit"
+							variant="outlined"
+							color="primary"
+							fullWidth
+							startIcon={<SearchIcon />}
+						>
+							Search
+						</Button>
+					</div>
 				</Grid>
 			</Grid>
 		</form>

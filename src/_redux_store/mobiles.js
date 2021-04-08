@@ -14,7 +14,7 @@ const mobilesSlice = createSlice({
 			state.list[payload.id] = payload
 		},
 		searchMobiles: (state, { payload }) => {
-			state.filtered = Object.values(state.list).map(
+			state.filtered = Object.values(state.list).filter(
 				(mobile) =>
 					mobile.model === payload.model && mobile.brand === payload.brand
 			)
