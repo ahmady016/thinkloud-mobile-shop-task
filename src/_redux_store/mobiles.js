@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 import { createSlice } from '@reduxjs/toolkit'
 
 const mobilesSlice = createSlice({
@@ -8,6 +7,9 @@ const mobilesSlice = createSlice({
 		filtered: [],
 	},
 	reducers: {
+		setMobiles: (state, { payload }) => {
+			state.list = payload
+		},
 		addMobile: (state, { payload }) => {
 			state.list[payload.id] = payload
 		},
@@ -20,5 +22,5 @@ const mobilesSlice = createSlice({
 	},
 })
 
-export const actions = { ...mobilesSlice.actions }
+export const { setMobiles, addMobile, searchMobiles } = mobilesSlice.actions
 export default mobilesSlice.reducer
