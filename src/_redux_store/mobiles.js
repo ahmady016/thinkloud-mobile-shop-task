@@ -3,9 +3,9 @@ import { createSlice } from '@reduxjs/toolkit'
 const mobilesSlice = createSlice({
 	name: 'mobiles',
 	initialState: {
-		list: {},
-		filtered: [],
-		selected: {},
+		list: null,
+		filtered: null,
+		selected: null,
 	},
 	reducers: {
 		setMobiles: (state, { payload }) => {
@@ -16,7 +16,7 @@ const mobilesSlice = createSlice({
 			if(payload.id)
 				state.selected = state.list[payload.id]
 			else
-				state.selected = {}
+				state.selected = null
 		},
 		addMobile: (state, { payload }) => {
 			state.list[payload.id] = payload
