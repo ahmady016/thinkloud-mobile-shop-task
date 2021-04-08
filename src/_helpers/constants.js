@@ -22,3 +22,4 @@ export const SCREEN_SIZES = [
   '5',
   '6',
 ]
+export const PIE_COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"]
