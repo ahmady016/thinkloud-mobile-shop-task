@@ -12,6 +12,7 @@
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.57",
     "react-hook-form": "^7.0.4",
+    "@hookform/resolvers": "^2.0.1",
     "yup": "^0.32.9",
     "recharts": "^2.0.9",
     "axios": "^0.21.1",
