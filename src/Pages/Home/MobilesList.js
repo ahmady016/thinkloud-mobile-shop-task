@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import Typography from '@material-ui/core/Typography'
 import { DataGrid } from '@material-ui/data-grid'
+import { deepPurple } from '@material-ui/core/colors'
 
 import { setSelectedMobile } from '../../_redux_store/mobiles'
 
@@ -15,7 +16,7 @@ const MobilesListContainer = styled.div`
 		margin-bottom: 0.5rem;
 	}
 	& div.MuiDataGrid-main div.MuiDataGrid-colCellWrapper {
-		background-color: #3f51b5 !important;
+		background-color: ${deepPurple[500]} !important;
 		color: #fff !important;
 	}
 	& div.MuiDataGrid-row {
@@ -23,7 +24,7 @@ const MobilesListContainer = styled.div`
 	}
 	& div.MuiDataGrid-row.Mui-selected,
 	& div.MuiDataGrid-row.Mui-selected:hover {
-		background-color: #d6dbf3;
+		background-color: ${deepPurple[100]};
 	}
 `
 
