@@ -83,7 +83,7 @@ function AddMobile() {
 		console.log('🚀: onSubmit => values', values)
 		store.dispatch(
 			addMobile({
-				id: nanoid(),
+				id: nanoid(12),
 				...values,
 			})
 		)
