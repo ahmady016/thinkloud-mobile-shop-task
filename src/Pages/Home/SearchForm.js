@@ -94,7 +94,7 @@ function SearchForm() {
 					<Grid item md={3} xs={12}>
 						<div className="w-100 h-100 mt-05 flex-column-around">
 							<Button
-								type="submit"
+								type="button"
 								variant="outlined"
 								color="secondary"
 								fullWidth

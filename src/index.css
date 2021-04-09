@@ -43,6 +43,12 @@ code {
   align-items: center;
   flex-wrap: wrap;
 }
+.flex-evenly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
 .flex-around-top {
   display: flex;
   justify-content: space-around;
