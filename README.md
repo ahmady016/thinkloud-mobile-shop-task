@@ -2,11 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Tools Used
-# react, react-dom
-# react MUI
-# react-hook-form
-# recharts
+# Tools Used
+## react, react-dom
+## redux, redux-toolkit
+## react MUI
+## react-hook-form
+## recharts
 
 ## To Runs the app in the development mode.
 # clone the github repo

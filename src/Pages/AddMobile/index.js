@@ -5,6 +5,10 @@ import { useForm, Controller } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 
+import { nanoid } from 'nanoid'
+import { store } from '../../_redux_store'
+import { addMobile } from '../../_redux_store/mobiles'
+
 import {
 	BRANDS,
 	MEMORIES,
@@ -77,6 +81,12 @@ function AddMobile() {
 	})
 	const onSubmit = (values) => {
 		console.log('🚀: onSubmit => values', values)
+		store.dispatch(
+			addMobile({
+				id: nanoid(),
+				...values,
+			})
+		)
 		goToHome()
 	}
 	return (
@@ -85,7 +95,7 @@ function AddMobile() {
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<Grid container spacing={3} className="w-90 mx-auto">
 					<Grid item md={6} xs={12}>
-            {/* model */}
+						{/* model */}
 						<Controller
 							name="model"
 							control={control}
@@ -98,7 +108,7 @@ function AddMobile() {
 						{errors.model && (
 							<Alert severity="error">{errors.model.message}</Alert>
 						)}
-            {/* year */}
+						{/* year */}
 						<Controller
 							name="manufacture_year"
 							control={control}
@@ -117,7 +127,7 @@ function AddMobile() {
 								{errors.manufacture_year.message}
 							</Alert>
 						)}
-            {/* brand */}
+						{/* brand */}
 						<Controller
 							name="brand"
 							control={control}
@@ -137,7 +147,7 @@ function AddMobile() {
 						{errors.brand && (
 							<Alert severity="error">{errors.brand.message}</Alert>
 						)}
-            {/* memory */}
+						{/* memory */}
 						<Controller
 							name="memory"
 							control={control}
@@ -160,7 +170,7 @@ function AddMobile() {
 					</Grid>
 					<Grid item container md={5} xs={12} className="mt-2 ml-2">
 						{/* options */}
-            <Grid item md={4} xs={12}>
+						<Grid item md={4} xs={12}>
 							<FormControl component="fieldset">
 								<FormLabel component="legend">Options</FormLabel>
 								<FormGroup fullWidth>
@@ -207,7 +217,7 @@ function AddMobile() {
 							</FormControl>
 						</Grid>
 						{/* screen */}
-            <Grid item md={4} xs={12}>
+						<Grid item md={4} xs={12}>
 							<FormControl component="fieldset">
 								<FormLabel component="legend">Screen</FormLabel>
 								<Controller
@@ -228,7 +238,7 @@ function AddMobile() {
 							</FormControl>
 						</Grid>
 						{/* color */}
-            <Grid item md={4} xs={12}>
+						<Grid item md={4} xs={12}>
 							<FormControl component="fieldset">
 								<FormLabel component="legend">Color</FormLabel>
 								<Controller
@@ -249,7 +259,7 @@ function AddMobile() {
 							</FormControl>
 						</Grid>
 					</Grid>
-          {/* buttons */}
+					{/* buttons */}
 					<Grid item xs={12} className="flex-end mt-1">
 						<Button
 							type="button"

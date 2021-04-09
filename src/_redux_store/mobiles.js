@@ -1,5 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
+
 import getChartValues from '../_helpers/getChartValues'
+import { MOBILES } from '../_helpers/constants'
+import LS from '../_helpers/localStorage'
 
 const mobilesSlice = createSlice({
 	name: 'mobiles',
@@ -23,6 +26,8 @@ const mobilesSlice = createSlice({
 		},
 		addMobile: (state, { payload }) => {
 			state.list[payload.id] = payload
+			state.filtered = Object.values(state.list)
+			LS.set(MOBILES, state.list)
 		},
 		searchMobiles: (state, { payload }) => {
 			state.filtered = Object.values(state.list).filter(
